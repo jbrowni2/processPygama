@@ -7,7 +7,10 @@
         "bl_intercept",
         "bl_std",
         "energy",
-        "trapEmax", "tp_max0", "tp_50", "wf_max"
+        "trapEmax",
+        "tp_max0",
+        "tp_50",
+        "wf_max"
     ],
     "processors": {
         "bl_mean1, bl_std1, bl_slope1, bl_intercept1": {
@@ -64,19 +67,25 @@
                 "sub1"
             ]
         },
-          "tp_50": {
-                  "function": "time_point_thresh",
-                  "module": "pygama.dsp.processors",
-                  "args": ["sub1", "wf_max*0.5", "tp_max0", 0, "tp_50"],
-                  "unit": "ns"
-              },
+        "tp_50": {
+            "function": "time_point_thresh",
+            "module": "pygama.dsp.processors",
+            "args": [
+                "sub1",
+                "wf_max*0.5",
+                "tp_max0",
+                0,
+                "tp_50"
+            ],
+            "unit": "ns"
+        },
         "wf_trap": {
             "function": "trap_norm",
             "module": "pygama.dsp.processors",
             "args": [
                 "sub1",
-                "10*us",
-                "0.3*us",
+                "6*us",
+                "0.4*us",
                 "wf_trap"
             ],
             "prereqs": [

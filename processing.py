@@ -51,7 +51,7 @@ def main():
 
 
     chan_file = cwd + "/chan_config.json"
-    conf_file = cwd + "/dsp_config.json"
+    conf_file = cwd + "/dspConfigFiles/dsp_config.json"
     with open(conf_file) as f:
         dsp = json.load(f, object_pairs_hook=OrderedDict)
     with open(chan_file) as f:
@@ -64,7 +64,7 @@ def main():
             dataFile = data['daq_dir'] + '/Run' + str(run)
             outFile = data['raw_dir'] + '/Run' + str(run) + '.lh5'
             configure["ORSIS3316WaveformDecoder"]["Card1"]["out_stream"] = outFile
-            configure["ORiSegHVCardDecoderForHV"]["HV1"]["out_stream"] = outFile
+            #configure["ORiSegHVCardDecoderForHV"]["HV1"]["out_stream"] = outFile
             #configure["ORCAEN792NDecoderForQdc"]["QDC"]["out_stream"] = outFile
 
 
@@ -74,7 +74,7 @@ def main():
     if args.r2d:
         for run in run_list:
             chan_file = cwd + "/chan_config.json"
-            conf_file = cwd + "/dsp_config.json"
+            conf_file = cwd + "/dspConfigFiles/dsp_config.json"
             with open(conf_file) as f:
                 dsp = json.load(f, object_pairs_hook=OrderedDict)
             with open(chan_file) as f:

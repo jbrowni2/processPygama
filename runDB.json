@@ -40,7 +40,7 @@
 "experiment":"energy res"
 },
 "9":{
-  "run_list":[3498],
+  "run_list":[3490,3491,3492,3493,3495,3496,3497,3498],
   "source":"Co60",
   "experiment":"timeDiff"
 },
