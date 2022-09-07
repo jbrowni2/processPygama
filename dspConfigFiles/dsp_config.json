@@ -84,8 +84,8 @@
             "module": "pygama.dsp.processors",
             "args": [
                 "sub1",
-                "6*us",
-                "0.4*us",
+                "10*us",
+                "0.7*us",
                 "wf_trap"
             ],
             "prereqs": [

@@ -10,11 +10,13 @@ from lmfit import Model
 import csv
 
 def main():
-    t2_data = fd.get_df(1035, "Card1")
-    energy = [(t2_data["maxEnergy"].loc[i] - t2_data["startEnergy"].loc[i]) for i in range(0,len(t2_data["startEnergy"]))]
+    run_list = [x for x in range(1202,1207)]
+    t2_data = fd.get_df_multiple(run_list, "Card1")
+    #energy = [(t2_data["maxEnergy"].loc[i] - t2_data["startEnergy"].loc[i]) for i in range(0,len(t2_data["startEnergy"]))]
 
-    plt.subplot(1,2,2)
-    plt.hist(energy, histtype="step", bins = 2000000)
+    #plt.subplot(1,2,2)
+    plt.hist(t2_data['trapEmax'], histtype="step", bins = 200000)
+    plt.xlim(0,1000)
     plt.show()
 
 

@@ -57,10 +57,11 @@ def main():
     with open(chan_file) as f:
         chan_conf = json.load(f, object_pairs_hook=OrderedDict)
 
-
+    #run_list = [x for x in range(1202,1231)]
     if args.d2r:
         for run in run_list:
 
+            #dataFile = data['daq_dir'] + '/Run' + str(run) + '.gz'
             dataFile = data['daq_dir'] + '/Run' + str(run)
             outFile = data['raw_dir'] + '/Run' + str(run) + '.lh5'
             configure["ORSIS3316WaveformDecoder"]["Card1"]["out_stream"] = outFile
