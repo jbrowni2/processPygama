@@ -48,6 +48,11 @@ def main():
         run_lists = json.load(read_file)
 
     run_list = run_lists[str(query)]['run_list']
+    if isinstance(run_list, str):
+        idx = run_list.find('-')
+        run_list = [x for x in range(int(run_list[0:idx]), int(run_list[idx+1:])+1)]
+
+
 
 
     chan_file = cwd + "/chan_config.json"
@@ -60,7 +65,7 @@ def main():
     #run_list = [x for x in range(1202,1231)]
     if args.d2r:
         for run in run_list:
-
+            print(run)
             #dataFile = data['daq_dir'] + '/Run' + str(run) + '.gz'
             dataFile = data['daq_dir'] + '/Run' + str(run)
             outFile = data['raw_dir'] + '/Run' + str(run) + '.lh5'

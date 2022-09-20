@@ -1,62 +1,67 @@
 {
   "1":{
-  "run_list":[1035],
+  "run_list":"8651-8661",
   "source":"background",
-  "experiment":"background for deadLayer"
+  "experiment":"pulsar peak at 100 keV"
 },
 "2":{
-"run_list":[1119,1120,1121,1122],
-"source":"cO60",
-"experiment":"energy res"
+  "run_list":"8662-8683",
+  "source":"pulsar",
+  "experiment":"cut pulsar peak in half"
 },
 "3":{
-"run_list":[1124,1125,1126,1127],
-"source":"Ba133",
-"experiment":"energy res"
+  "run_list":"8684-8706",
+  "source":"pulsar",
+  "experiment":"added ferrites to pulsar at singal end"
 },
 "4":{
-"run_list":[1128,1129,1130],
-"source":"Cs137",
-"experiment":"energy res"
+  "run_list":"8707-8729",
+  "source":"pulsar",
+  "experiment":"added another ferrite at digitizer end"
 },
 "5":{
-"run_list":[1132,1133,1134,1135,1136],
-"source":"Ba133",
-"experiment":"dead Layer collimated"
+  "run_list":"8750-8781",
+  "source":"pulsar",
+  "experiment":"used shaper at 6 us"
 },
 "6":{
-"run_list":[1141],
-"source":"pygama test",
-"experiment":"test of pygama small file"
+  "run_list":"8786-8809",
+  "source":"pulsar",
+  "experiment":"two ferites and decreased polling rate"
 },
 "7":{
-"run_list":[1145],
-"source":"60Hz test",
-"experiment":"testing the double length timestamp"
+  "run_list":"8811-8879",
+  "source":"eu152",
+  "experiment":"energy resolution"
 },
 "8":{
-"run_list":[1124],
-"source":"Ba133",
-"experiment":"energy res"
+  "run_list":"8880-8897",
+  "source":"eu152",
+  "experiment":"energy resolution"
 },
 "9":{
-  "run_list":[3490,3491,3492,3493,3495,3496,3497,3498],
-  "source":"Co60",
-  "experiment":"timeDiff"
+  "run_list":"8909-8930",
+  "source":"eu152",
+  "experiment":"energy resolution"
 },
 "10":{
-  "run_list":[1190],
-  "source":"background",
-  "experiment":"QDCTest"
+  "run_list":"9139-9159",
+  "source":"pulasr",
+  "experiment":"max voltage for pulsar"
 },
 "11":{
-  "run_list":[1191],
-  "source":"background",
-  "experiment":"HVTest"
+  "run_list":"9160-9187",
+  "source":"pulsar",
+  "experiment":"pulsar int osc"
 },
 "12":{
-	"run_list":[1193],
-	"source":"background",
-	"experiment":"HVTest"
+  "run_list":"9188-9208",
+  "source":"pulsar",
+  "experiment":"pulsar ac osc"
+},
+"13":{
+  "run_list":"8931-9138",
+  "source":"pulsar",
+  "experiment":"pulsar ac osc"
 }
 }
