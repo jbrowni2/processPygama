@@ -61,7 +61,22 @@
 },
 "13":{
   "run_list":"8931-9138",
+  "source":"eu152",
+  "experiment":"energy resolution 1724"
+},
+"14":{
+  "run_list":"1330-1360",
+  "source":"eu152",
+  "experiment":"energy resolution 1724"
+},
+"15":{
+  "run_list":"1364-1395",
+  "source":"eu152",
+  "experiment":"energy resolution 1725"
+},
+"16":{
+  "run_list":"1396-1406",
   "source":"pulsar",
-  "experiment":"pulsar ac osc"
+  "experiment":"noise 1725"
 }
 }

@@ -67,15 +67,18 @@ def main():
         for run in run_list:
             print(run)
             #dataFile = data['daq_dir'] + '/Run' + str(run) + '.gz'
-            dataFile = data['daq_dir'] + '/Run' + str(run)
-            outFile = data['raw_dir'] + '/Run' + str(run) + '.lh5'
-            configure["ORSIS3316WaveformDecoder"]["Card1"]["out_stream"] = outFile
-            #configure["ORiSegHVCardDecoderForHV"]["HV1"]["out_stream"] = outFile
-            #configure["ORCAEN792NDecoderForQdc"]["QDC"]["out_stream"] = outFile
+            try:
+                dataFile = data['daq_dir'] + '/Run' + str(run)
+                outFile = data['raw_dir'] + '/Run' + str(run) + '.lh5'
+                configure["ORSIS3316WaveformDecoder"]["Card1"]["out_stream"] = outFile
+                #configure["ORiSegHVCardDecoderForHV"]["HV1"]["out_stream"] = outFile
+                #configure["ORCAEN792NDecoderForQdc"]["QDC"]["out_stream"] = outFile
 
 
-            build_raw(dataFile, data['stream_type'], configure, overwrite=True)
-            #build_raw(dataFile, overwrite=True)
+                build_raw(dataFile, data['stream_type'], configure, overwrite=True)
+                #build_raw(dataFile, overwrite=True)
+            except:
+                print("run does not exist")
 
     if args.r2d:
         for run in run_list:
@@ -85,12 +88,17 @@ def main():
                 dsp = json.load(f, object_pairs_hook=OrderedDict)
             with open(chan_file) as f:
                 chan_conf = json.load(f, object_pairs_hook=OrderedDict)
+        
+            
 
             dataFile = data['raw_dir'] + '/Run' + str(run) + '.lh5'
             outFile = data['dsp_dir'] + '/Run' + str(run) + '.lh5'
 
-            build_dsp(dataFile, outFile, chan_config = chan_conf, write_mode = 'r')
-            #build_dsp(dataFile, outFile, dsp_config = dsp)
+            try:
+                build_dsp(dataFile, outFile, chan_config = chan_conf, write_mode = 'r')
+                #build_dsp(dataFile, outFile, dsp_config = dsp)
+            except:
+                continue
 
 
 if __name__ == "__main__":
