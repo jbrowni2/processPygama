@@ -86,8 +86,8 @@ def main():
             with open(chan_file) as f:
                 chan_conf = json.load(f, object_pairs_hook=OrderedDict)
 
-            dataFile = data['raw_dir'] + '/Run' + str(run) + '.lh5'
-            outFile = data['dsp_dir'] + '/Run' + str(run) + '.lh5'
+            dataFile = data['raw_dir'] + '/run' + str(run) + '.lh5'
+            outFile = data['dsp_dir'] + '/run' + str(run) + '.lh5'
 
             build_dsp(dataFile, outFile, chan_config = chan_conf, write_mode = 'r')
             #build_dsp(dataFile, outFile, dsp_config = dsp)
