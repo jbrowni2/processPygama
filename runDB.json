@@ -1,65 +1,45 @@
 {
-  "1":{
-  "run_list":"8651-8661",
-  "source":"background",
-  "experiment":"pulsar peak at 100 keV"
-},
-"2":{
-  "run_list":"8662-8683",
-  "source":"pulsar",
-  "experiment":"cut pulsar peak in half"
-},
-"3":{
-  "run_list":"8684-8706",
-  "source":"pulsar",
-  "experiment":"added ferrites to pulsar at singal end"
-},
-"4":{
-  "run_list":"8707-8729",
-  "source":"pulsar",
-  "experiment":"added another ferrite at digitizer end"
-},
-"5":{
-  "run_list":"8750-8781",
-  "source":"pulsar",
-  "experiment":"used shaper at 6 us"
-},
-"6":{
+"1":{
   "run_list":"8786-8809",
   "source":"pulsar",
   "experiment":"two ferites and decreased polling rate"
 },
-"7":{
+"2":{
   "run_list":"8811-8879",
   "source":"eu152",
   "experiment":"energy resolution"
 },
-"8":{
+"3":{
   "run_list":"8880-8897",
   "source":"eu152",
   "experiment":"energy resolution"
 },
-"9":{
+"4":{
   "run_list":"8909-8930",
   "source":"eu152",
   "experiment":"energy resolution"
 },
-"10":{
+"5":{
   "run_list":"9139-9159",
-  "source":"pulasr",
+  "source":"pulsar",
   "experiment":"max voltage for pulsar"
 },
-"11":{
+"6":{
   "run_list":"9160-9187",
   "source":"pulsar",
   "experiment":"pulsar int osc"
 },
-"12":{
+"7":{
   "run_list":"9188-9208",
   "source":"pulsar",
   "experiment":"pulsar ac osc"
 },
-"13":{
+"8":{
+  "run_list":"8931-9138",
+  "source":"eu152",
+  "experiment":"energy resolution"
+},
+"9":{
   "run_list":"8931-9138",
   "source":"eu152",
   "experiment":"energy resolution 1724"
@@ -77,6 +57,60 @@
 "16":{
   "run_list":"1396-1406",
   "source":"pulsar",
+<<<<<<< HEAD
   "experiment":"noise 1725"
+=======
+  "experiment":"non attenuated"
+},
+"10":{
+  "run_list":"9231-9244",
+  "source":"pulsar",
+  "experiment":"energy resolution"
+},
+"11":{
+  "run_list":"1320-1322",
+  "source":"eu152",
+  "experiment":"energy resolution"
+},
+"12":{
+  "run_list":[1320],
+  "source":"eu152",
+  "experiment":"energy resolution"
+},
+"13":{
+  "run_list":[1],
+  "source":"pulsar",
+  "experiment":"wavelet denoise test"
+},
+"14":{
+  "run_list":[1364],
+  "source":"eu152",
+  "experiment":"threshold in c110"
+},
+"15":{
+	"run_list":"1330-1360",
+	"source":"eu152",
+	"experiment":"energy res in c11o"
+},
+"16":{
+	"run_list":"1361-1363",
+	"source":"background",
+	"experiment":"threshold"
+},
+"17":{
+	"run_list":"1364-1394",
+	"source":"eu152",
+	"experiment":"energy res for 1725"
+},
+"18":{
+	"run_list":"1396-1394",
+	"source":"pulsar",
+	"experiment":"noise res for 1725"
+},
+"19":{
+	"run_list":"2-20",
+	"source":"pulsar",
+	"experiment":"noise res for 1725"
+>>>>>>> ec948a8c6b92c8a000a6691779bf8f4290f9385b
 }
 }

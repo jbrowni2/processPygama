@@ -91,8 +91,8 @@ def main():
         
             
 
-            dataFile = data['raw_dir'] + '/Run' + str(run) + '.lh5'
-            outFile = data['dsp_dir'] + '/Run' + str(run) + '.lh5'
+            dataFile = data['raw_dir'] + '/run' + str(run) + '.lh5'
+            outFile = data['dsp_dir'] + '/run' + str(run) + '.lh5'
 
             try:
                 build_dsp(dataFile, outFile, chan_config = chan_conf, write_mode = 'r')
