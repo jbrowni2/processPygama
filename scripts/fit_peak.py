@@ -12,7 +12,6 @@ from lmfit import Model
 
 
 def main():
-<<<<<<< HEAD
    # run_list = [x for x in range(1364,1366)]
     #t2_data1 = fd.get_df_multiple(run_list, "Card1")
     #run_list = [x for x in range(1367,1388)]
@@ -24,10 +23,6 @@ def main():
     #m = -0.193
 
     run_list = [x for x in range(1330,1361)]
-=======
-
-    run_list = [x for x in range(2,21)]
->>>>>>> ec948a8c6b92c8a000a6691779bf8f4290f9385b
     t2_data = fd.get_df_multiple(run_list, "Card1")
     c =0.0408625
     m = -0.16892
@@ -35,13 +30,8 @@ def main():
 
     counts, bins, bars = plt.hist(t2_data['calEnergy'], histtype='step', bins=1200000)
 
-<<<<<<< HEAD
     lower = hA.find_nearest_bin(bins,-0.15)
     upper = hA.find_nearest_bin(bins, 0.3)
-=======
-    lower = hA.find_nearest_bin(bins,60)
-    upper = hA.find_nearest_bin(bins,90)
->>>>>>> ec948a8c6b92c8a000a6691779bf8f4290f9385b
     ydata = counts[lower:upper]
     xdata = bins[lower:upper]
 
@@ -50,13 +40,8 @@ def main():
     #gmodel = Model(fM.linDubGaus)
     gmodel = Model(fM.linDubGaus)
     i = np.argmax(ydata)
-<<<<<<< HEAD
     #params = gmodel.make_params(A=700, m1=315.5, s1=0.5, H_tail=-0.000001, H_step=1, tau=-0.5, slope=-6, intrcpt=180)
     params = gmodel.make_params(a1=400, m1=xdata[i], s1=0.07, a2=400, m2=xdata[i]+0.15, s2=0.07, slope=-0.046, intrcpt=58)
-=======
-    #params = gmodel.make_params(A=700, m1=xdata[i], s1=0.2, H_tail=-0.000001, H_step=1, tau=-0.5, slope=-6, intrcpt=180)
-    params = gmodel.make_params(a1=400, m1=xdata[i], s1=0.07, a2=400, m2=xdata[i]+0.2, s2=0.07, slope=-0.046, intrcpt=58)
->>>>>>> ec948a8c6b92c8a000a6691779bf8f4290f9385b
     #params['s1'].vary = False
     result = gmodel.fit(ydata,params, x=xdata)
 
@@ -71,11 +56,7 @@ def main():
     gmodel = Model(fM.lingaus)
     i = np.argmax(ydata)
     #params = gmodel.make_params(A=700, m1=315.5, s1=0.5, H_tail=-0.000001, H_step=1, tau=-0.5, slope=-6, intrcpt=180)
-<<<<<<< HEAD
     params = gmodel.make_params(a1=300, m1=xdata[i], s1=0.05, slope=-0.046, intrcpt=58)
-=======
-    params = gmodel.make_params(a1=1000, m1=xdata[i], s1=0.25, slope=-0.046, intrcpt=58)
->>>>>>> ec948a8c6b92c8a000a6691779bf8f4290f9385b
     #params['s1'].vary = False
     result = gmodel.fit(ydata,params, x=xdata)
 
@@ -84,8 +65,8 @@ def main():
     err = 2.355*result.params['s1'].stderr
     energy = result.params['m1'].value
     print(fw)
-<<<<<<< HEAD
     print(err)
+    """
 
     
 
@@ -94,21 +75,6 @@ def main():
     plt.ylim(0, 30000)
     plt.xlabel("Energy [keV]")
     plt.ylabel("Counts")
-=======
-    """
-
-
-
-    
-
-   # plt.hist(t2_data['calEnergy'], histtype='step', bins=16000)
-    plt.xlim(70, 80)
-    plt.ylim(0, 300)
-    plt.xlabel("Energy [keV]")
-    plt.ylabel("Counts")
-   # plt.text(77.6,500, "FWHM1 = 0.1572(12) keV")
-   # plt.text(77.6,400, "FWHM2 = 0.1668(17) keV")
->>>>>>> ec948a8c6b92c8a000a6691779bf8f4290f9385b
     plt.plot(xdata, result.best_fit, 'r-', label='best fit')
     plt.text(-0.12,28000, "FWHM = 0.0776(5) keV")
     plt.title("Fit of RMS Noise from Ge Detector 1724")

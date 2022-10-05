@@ -57,60 +57,6 @@
 "16":{
   "run_list":"1396-1406",
   "source":"pulsar",
-<<<<<<< HEAD
   "experiment":"noise 1725"
-=======
-  "experiment":"non attenuated"
-},
-"10":{
-  "run_list":"9231-9244",
-  "source":"pulsar",
-  "experiment":"energy resolution"
-},
-"11":{
-  "run_list":"1320-1322",
-  "source":"eu152",
-  "experiment":"energy resolution"
-},
-"12":{
-  "run_list":[1320],
-  "source":"eu152",
-  "experiment":"energy resolution"
-},
-"13":{
-  "run_list":[1],
-  "source":"pulsar",
-  "experiment":"wavelet denoise test"
-},
-"14":{
-  "run_list":[1364],
-  "source":"eu152",
-  "experiment":"threshold in c110"
-},
-"15":{
-	"run_list":"1330-1360",
-	"source":"eu152",
-	"experiment":"energy res in c11o"
-},
-"16":{
-	"run_list":"1361-1363",
-	"source":"background",
-	"experiment":"threshold"
-},
-"17":{
-	"run_list":"1364-1394",
-	"source":"eu152",
-	"experiment":"energy res for 1725"
-},
-"18":{
-	"run_list":"1396-1394",
-	"source":"pulsar",
-	"experiment":"noise res for 1725"
-},
-"19":{
-	"run_list":"2-20",
-	"source":"pulsar",
-	"experiment":"noise res for 1725"
->>>>>>> ec948a8c6b92c8a000a6691779bf8f4290f9385b
 }
 }

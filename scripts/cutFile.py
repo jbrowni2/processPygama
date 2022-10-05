@@ -30,19 +30,19 @@ import processes.histogramAction as hA
 
 def main():
     #Here we set the range of the files
-    hi = 140
-    lo = 100
+    hi = 50
+    lo = 30
 
 
     #Here you set the calibration
-    m = 0.040862505104599725
-    c = -0.1689243143849808
+    m = 0.04280811709355686
+    c = -0.04784377473936274
 
     #find the files
-    runs = [x for x in range(1330,1361)]
+    runs = [x for x in range(1396,1407)]
     #run = 1289
     #name the output file
-    f_wfs = 'opt/Run19.lh5'
+    f_wfs = 'opt/Run2.lh5'
 
 
     cwd = os.getcwd()

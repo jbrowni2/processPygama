@@ -28,8 +28,8 @@ import processes.histogramAction as hA
 
 def peak_width(tb, verbosity, make_plot=False):
 
-    m = 0.0428
-    b = -0.193
+    m = 0.04280811709355686
+    b = -0.04784377473936274
     calib = m*tb['trapEmax'].nda + b
 
     binning = np.linspace(30,50,num=30000)
@@ -70,7 +70,7 @@ def peak_width(tb, verbosity, make_plot=False):
 def noiseFit(i,flat, rise, dsp_config, tb_wfs):
     flat_units = str(flat)+'*us'
     rise_units = str(rise)+'*us'
-    args = ['sub1',rise_units,flat_units,'wf_trap']
+    args = ['waveform',rise_units,flat_units,'wf_trap']
     dsp_config['processors']['wf_trap']['args'] = args
 
     fom = run_one_dsp(tb_wfs, dsp_config,fom_function=peak_width, verbosity=True)
@@ -88,7 +88,7 @@ def noiseFit(i,flat, rise, dsp_config, tb_wfs):
 
 
 def main():
-    conf_file = "../dspConfigFiles/dsp_config.json"
+    conf_file = "../dspConfigFiles/configSubSecond.json"
     with open(conf_file) as f:
         dsp_config = json.load(f, object_pairs_hook=OrderedDict)
         
@@ -99,7 +99,7 @@ def main():
 
     file = data["tier1_dir"] + "/opt"
     optSto = LH5Store(file)
-    tb_wfs, nwfs = optSto.read_object('Card1/',"Run1.lh5")
+    tb_wfs, nwfs = optSto.read_object('Card1/',"Run2.lh5")
 
     rise_arr = np.linspace(1,30,90)
     flat_arr = np.linspace(0.8,0.8,1)
