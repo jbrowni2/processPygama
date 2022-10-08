@@ -29,7 +29,7 @@ import processes.histogramAction as hA
 
 
 def main():
-    df = pd.read_csv('RiseNoiseChange1725Sub2.csv')
+    df = pd.read_csv('RiseNoiseChange1725lineSub.csv')
 
     df["FW2"] = df["FWHM"]**2
     #df["rise"] = np.linspace(3,20,18)

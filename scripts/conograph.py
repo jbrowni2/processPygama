@@ -28,8 +28,8 @@ import processes.histogramAction as hA
 
 def peak_width(tb, verbosity, make_plot=False):
 
-    m = 0.04280811709355686
-    b = -0.04784377473936274
+    m = 0.0428
+    b = -0.193
     calib = m*tb['trapEmax'].nda + b
 
     binning = np.linspace(30,50,num=30000)
@@ -88,7 +88,7 @@ def noiseFit(i,flat, rise, dsp_config, tb_wfs):
 
 
 def main():
-    conf_file = "../dspConfigFiles/configSubSecond.json"
+    conf_file = "../dspConfigFiles/downSampleTest.json"
     with open(conf_file) as f:
         dsp_config = json.load(f, object_pairs_hook=OrderedDict)
         
@@ -99,9 +99,9 @@ def main():
 
     file = data["tier1_dir"] + "/opt"
     optSto = LH5Store(file)
-    tb_wfs, nwfs = optSto.read_object('Card1/',"Run2.lh5")
+    tb_wfs, nwfs = optSto.read_object('Card1/',"Run3.lh5")
 
-    rise_arr = np.linspace(1,30,90)
+    rise_arr = np.linspace(1,30,30)
     flat_arr = np.linspace(0.8,0.8,1)
 
     manager = mp.Manager()
@@ -139,7 +139,7 @@ def main():
             continue
 
     df = pd.DataFrame({"FWHM": pd.Series(fw), "rise": pd.Series(riseDict), "flat": pd.Series(flatDict), "error": pd.Series(err)})
-    df.to_csv("RiseNoiseChange1725Sub2.csv")
+    df.to_csv("RiseNoiseChange1725lineSub.csv")
 
 
 

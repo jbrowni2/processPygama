@@ -11,7 +11,7 @@
             "function": "linear_slope_fit",
             "module": "pygama.dsp.processors",
             "args": [
-                "waveform[10000:15000]",
+                "waveform[1000:15000]",
                 "bl_mean1",
                 "bl_std1",
                 "bl_slope1",
@@ -28,7 +28,7 @@
             ]
         },
         "sub1": {
-            "function": "downsampler",
+            "function": "subline",
             "module": "pygama.dsp.processors",
             "args": [
                 "waveform",
@@ -43,8 +43,8 @@
             "module": "pygama.dsp.processors",
             "args": [
                 "sub1",
-                "10*us",
-                "0.9*us",
+                "18.0*us",
+                "0.8*us",
                 "wf_trap"
             ],
             "prereqs": [

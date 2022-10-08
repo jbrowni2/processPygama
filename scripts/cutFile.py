@@ -35,14 +35,14 @@ def main():
 
 
     #Here you set the calibration
-    m = 0.04280811709355686
-    c = -0.04784377473936274
+    m = 0.0428
+    c = -0.193
 
     #find the files
     runs = [x for x in range(1396,1407)]
     #run = 1289
     #name the output file
-    f_wfs = 'opt/Run2.lh5'
+    f_wfs = 'opt/Run3.lh5'
 
 
     cwd = os.getcwd()

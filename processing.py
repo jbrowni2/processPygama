@@ -94,11 +94,9 @@ def main():
             dataFile = data['raw_dir'] + '/Run' + str(run) + '.lh5'
             outFile = data['dsp_dir'] + '/Run' + str(run) + '.lh5'
 
-            try:
-                build_dsp(dataFile, outFile, chan_config = chan_conf, write_mode = 'r')
+
+            build_dsp(dataFile, outFile, chan_config = chan_conf, write_mode = 'r')
             #build_dsp(dataFile, outFile, dsp_config = dsp)
-            except:
-                continue
 
 
 if __name__ == "__main__":
