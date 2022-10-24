@@ -67,18 +67,16 @@ def main():
         for run in run_list:
             print(run)
             #dataFile = data['daq_dir'] + '/Run' + str(run) + '.gz'
-            try:
-                dataFile = data['daq_dir'] + '/Run' + str(run)
-                outFile = data['raw_dir'] + '/Run' + str(run) + '.lh5'
-                configure["ORSIS3316WaveformDecoder"]["Card1"]["out_stream"] = outFile
+
+            dataFile = data['daq_dir'] + '/Run' + str(run)
+            outFile = data['raw_dir'] + '/Run' + str(run) + '.lh5'
+            configure["ORSIS3316WaveformDecoder"]["Card1"]["out_stream"] = outFile
                 #configure["ORiSegHVCardDecoderForHV"]["HV1"]["out_stream"] = outFile
                 #configure["ORCAEN792NDecoderForQdc"]["QDC"]["out_stream"] = outFile
 
 
-                build_raw(dataFile, data['stream_type'], configure, overwrite=True)
+            build_raw(dataFile, data['stream_type'], configure, overwrite=True)
                 #build_raw(dataFile, overwrite=True)
-            except:
-                print("run does not exist")
 
     if args.r2d:
         for run in run_list:
