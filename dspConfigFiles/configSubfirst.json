@@ -47,45 +47,13 @@
             ],
             "unit": "ADC"
         },
-        "tp_min0, tp_max0, wf_min0, wf_max": {
-            "function": "min_max",
-            "module": "pygama.dsp.processors",
-            "args": [
-                "sub1",
-                "tp_min0",
-                "tp_max0",
-                "wf_min0",
-                "wf_max"
-            ],
-            "unit": [
-                "ns",
-                "ns",
-                "ADC",
-                "ADC"
-            ],
-            "prereqs": [
-                "sub1"
-            ]
-        },
-        "tp_50": {
-            "function": "time_point_thresh",
-            "module": "pygama.dsp.processors",
-            "args": [
-                "sub1",
-                "wf_max*0.5",
-                "tp_max0",
-                0,
-                "tp_50"
-            ],
-            "unit": "ns"
-        },
         "wf_trap": {
             "function": "trap_norm",
             "module": "pygama.dsp.processors",
             "args": [
                 "sub1",
-                "6*us",
-                "0.0*us",
+                "8*us",
+                "0.5*us",
                 "wf_trap"
             ],
             "prereqs": [

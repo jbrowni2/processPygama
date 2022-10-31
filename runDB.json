@@ -41,45 +41,26 @@
 },
 "9":{
   "run_list":"8931-9138",
-  "source":"pulsar",
-  "experiment":"non attenuated"
-},
-"10":{
-  "run_list":"9231-9244",
-  "source":"pulsar",
-  "experiment":"energy resolution"
-},
-"11":{
-  "run_list":"1320-1322",
   "source":"eu152",
-  "experiment":"energy resolution"
-},
-"12":{
-  "run_list":[1320],
-  "source":"eu152",
-  "experiment":"energy resolution"
-},
-"13":{
-  "run_list":[1],
-  "source":"pulsar",
-  "experiment":"wavelet denoise test"
+  "experiment":"energy resolution 1724"
 },
 "14":{
-  "run_list":[1364],
+  "run_list":"1330-1360",
   "source":"eu152",
-  "experiment":"threshold in c110"
+  "experiment":"energy resolution 1724"
 },
 "15":{
-	"run_list":"1330-1360",
-	"source":"eu152",
-	"experiment":"energy res in c11o"
+  "run_list":"1364-1395",
+  "source":"eu152",
+  "experiment":"energy resolution 1725"
 },
 "16":{
-	"run_list":"1361-1363",
-	"source":"background",
-	"experiment":"threshold"
+  "run_list":"1396-1406",
+  "source":"pulsar",
+  "experiment":"noise 1725"
 },
 "17":{
+<<<<<<< HEAD
 	"run_list":"1364-1394",
 	"source":"eu152",
 	"experiment":"energy res for 1725"
@@ -113,5 +94,10 @@
 	"run_list":[7032],
 	"source":"LN Decoder",
 	"experiment":"test of LN decoder"
+=======
+  "run_list":[7107],
+  "source":"pulsar",
+  "experiment":"noise 1725"
+>>>>>>> 4fbb9966e8e6196a18780f2f9e4984983ee9fc28
 }
 }
