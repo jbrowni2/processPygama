@@ -93,5 +93,25 @@
 	"run_list":"2-20",
 	"source":"pulsar",
 	"experiment":"noise res for 1725"
+},
+"20":{
+	"run_list":[6994],
+	"source":"muon veto panel background",
+	"experiment":"test of HV and LN decoder"
+},
+"21":{
+	"run_list":[6998],
+	"source":"muon veto panel background",
+	"experiment":"test of HV and LN decoder"
+},
+"22":{
+	"run_list":[7024],
+	"source":"LN Decoder",
+	"experiment":"test of LN decoder"
+},
+"23":{
+	"run_list":[7032],
+	"source":"LN Decoder",
+	"experiment":"test of LN decoder"
 }
 }

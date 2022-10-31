@@ -10,8 +10,8 @@ from lmfit import Model
 import csv
 
 def main():
-    t2_data = fd.get_df(1035, "Card1")
-    print(t2_data)
+    t2_data = fd.get_t1_data(7032, "Card1")
+    print(t2_data[0]["accSum1"].nda)
 
 
 

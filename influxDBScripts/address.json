@@ -1,0 +1,6 @@
+{
+  "daq_dir":"/home/james/data/daq",
+  "tier1_dir":"/home/james/data/raw",
+  "tier2_dir":"/home/james/data/dsp",
+  "lh5_dir":"/HOME/data/"
+}

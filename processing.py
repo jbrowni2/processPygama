@@ -65,13 +65,12 @@ def main():
     #run_list = [x for x in range(1202,1231)]
     if args.d2r:
         for run in run_list:
-            print(run)
             #dataFile = data['daq_dir'] + '/Run' + str(run) + '.gz'
             dataFile = data['daq_dir'] + '/Run' + str(run)
             outFile = data['raw_dir'] + '/Run' + str(run) + '.lh5'
             configure["ORSIS3316WaveformDecoder"]["Card1"]["out_stream"] = outFile
             #configure["ORiSegHVCardDecoderForHV"]["HV1"]["out_stream"] = outFile
-            #configure["ORCAEN792NDecoderForQdc"]["QDC"]["out_stream"] = outFile
+            #configure["ORAmi286DecoderForLevel"]["LN"]["out_stream"] = outFile
 
 
             build_raw(dataFile, data['stream_type'], configure, overwrite=True)
@@ -86,8 +85,8 @@ def main():
             with open(chan_file) as f:
                 chan_conf = json.load(f, object_pairs_hook=OrderedDict)
 
-            dataFile = data['raw_dir'] + '/run' + str(run) + '.lh5'
-            outFile = data['dsp_dir'] + '/run' + str(run) + '.lh5'
+            dataFile = data['raw_dir'] + '/Run' + str(run) + '.lh5'
+            outFile = data['dsp_dir'] + '/Run' + str(run) + '.lh5'
 
             build_dsp(dataFile, outFile, chan_config = chan_conf, write_mode = 'r')
             #build_dsp(dataFile, outFile, dsp_config = dsp)
