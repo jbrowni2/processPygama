@@ -33,7 +33,7 @@ sto = LH5Store(raw_dir)
 
 lh5_keys = fd.get_tables(run)
 OldF = "Run" + str(run) + '.lh5'
-BackF = "Run" + str(run) + 'Backround.lh5'
+BackF = "Run" + str(run) + 'Background.lh5'
 sigF = "Run" + str(run) + 'Signal.lh5'
 
 N = 5
@@ -64,9 +64,12 @@ for tb in lh5_keys:
     len_wf = len(waveform_values[0])
     sig_arr = np.zeros((nwfs, int(len_wf/N)))
     sig_times = np.zeros(nwfs)
-    reshape = (N*nwfs,int(len_wf/N))
+    reshape = ((N*nwfs)-nwfs,int(len_wf/N))
     back_arr = np.zeros(reshape)
-    back_times = np.zeros(N*nwfs)
+    back_times = np.zeros(N*nwfs - nwfs)
+
+    backCount = 0
+    sigCount = 0
 
     for i in range(nwfs):
         wf = waveform_values[i]
@@ -74,19 +77,20 @@ for tb in lh5_keys:
         pretrigger = waveform_pretrig[i]
 
         for j in range(N):
-            idx = N*i + j
 
             start = j*(int(len_wf/N))
             stop = (j+1)*(int(len_wf/N))
             if start < pretrigger and stop > pretrigger:
-                sig_arr[i] = wf[start:stop]
+                sig_arr[sigCount] = wf[start:stop]
                 new_timestamp = original_t0 - (int(pretrigger) - int(j*(len_wf/N)))
-                sig_times[i] = new_timestamp
+                sig_times[sigCount] = new_timestamp
+                sigCount +=1
             else:
-                back_arr[idx] = wf[start:stop]
+                back_arr[backCount] = wf[start:stop]
 
                 new_timestamp = original_t0 - (int(pretrigger) - int(j*(len_wf/N)))
-                back_times[idx] = new_timestamp
+                back_times[backCount] = new_timestamp
+                backCount += 1
 
 
 
