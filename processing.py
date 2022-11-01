@@ -70,13 +70,8 @@ def main():
             dataFile = data['daq_dir'] + '/Run' + str(run)
             outFile = data['raw_dir'] + '/Run' + str(run) + '.lh5'
             configure["ORSIS3316WaveformDecoder"]["Card1"]["out_stream"] = outFile
-<<<<<<< HEAD
             #configure["ORiSegHVCardDecoderForHV"]["HV1"]["out_stream"] = outFile
             #configure["ORAmi286DecoderForLevel"]["LN"]["out_stream"] = outFile
-=======
-                #configure["ORiSegHVCardDecoderForHV"]["HV1"]["out_stream"] = outFile
-                #configure["ORCAEN792NDecoderForQdc"]["QDC"]["out_stream"] = outFile
->>>>>>> 4fbb9966e8e6196a18780f2f9e4984983ee9fc28
 
 
             build_raw(dataFile, data['stream_type'], configure, overwrite=True)
@@ -95,12 +90,6 @@ def main():
 
             dataFile = data['raw_dir'] + '/Run' + str(run) + '.lh5'
             outFile = data['dsp_dir'] + '/Run' + str(run) + '.lh5'
-
-<<<<<<< HEAD
-            dataFile = data['raw_dir'] + '/Run' + str(run) + '.lh5'
-            outFile = data['dsp_dir'] + '/Run' + str(run) + '.lh5'
-=======
->>>>>>> 4fbb9966e8e6196a18780f2f9e4984983ee9fc28
 
             build_dsp(dataFile, outFile, chan_config = chan_conf, write_mode = 'r')
             #build_dsp(dataFile, outFile, dsp_config = dsp)

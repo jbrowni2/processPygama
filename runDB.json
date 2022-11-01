@@ -60,44 +60,8 @@
   "experiment":"noise 1725"
 },
 "17":{
-<<<<<<< HEAD
-	"run_list":"1364-1394",
-	"source":"eu152",
-	"experiment":"energy res for 1725"
-},
-"18":{
-	"run_list":"1396-1394",
-	"source":"pulsar",
-	"experiment":"noise res for 1725"
-},
-"19":{
-	"run_list":"2-20",
-	"source":"pulsar",
-	"experiment":"noise res for 1725"
-},
-"20":{
-	"run_list":[6994],
-	"source":"muon veto panel background",
-	"experiment":"test of HV and LN decoder"
-},
-"21":{
-	"run_list":[6998],
-	"source":"muon veto panel background",
-	"experiment":"test of HV and LN decoder"
-},
-"22":{
-	"run_list":[7024],
-	"source":"LN Decoder",
-	"experiment":"test of LN decoder"
-},
-"23":{
-	"run_list":[7032],
-	"source":"LN Decoder",
-	"experiment":"test of LN decoder"
-=======
   "run_list":[7107],
   "source":"pulsar",
   "experiment":"noise 1725"
->>>>>>> 4fbb9966e8e6196a18780f2f9e4984983ee9fc28
 }
 }
