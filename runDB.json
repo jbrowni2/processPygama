@@ -60,8 +60,13 @@
   "experiment":"noise 1725"
 },
 "17":{
-  "run_list":[1346],
+  "run_list":[9188],
   "source":"pulsar",
-  "experiment":"noise 1725"
+  "experiment":"pulse injection file"
+},
+"18":{
+  "run_list":"8979-8981",
+  "source":"pulsar",
+  "experiment":"pulse injection file"
 }
 }

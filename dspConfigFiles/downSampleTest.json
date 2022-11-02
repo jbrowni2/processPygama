@@ -11,11 +11,7 @@
             "function": "linear_slope_fit",
             "module": "pygama.dsp.processors",
             "args": [
-<<<<<<< HEAD
                 "waveform[1000:10000]",
-=======
-                "waveform[1000:15000]",
->>>>>>> 4fbb9966e8e6196a18780f2f9e4984983ee9fc28
                 "bl_mean1",
                 "bl_std1",
                 "bl_slope1",
