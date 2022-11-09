@@ -73,8 +73,10 @@ def main():
             #configure["ORiSegHVCardDecoderForHV"]["HV1"]["out_stream"] = outFile
             #configure["ORAmi286DecoderForLevel"]["LN"]["out_stream"] = outFile
 
-
+            #try:
             build_raw(dataFile, data['stream_type'], configure, overwrite=True)
+            #except:
+                #print("Run does not exist")
                 #build_raw(dataFile, overwrite=True)
 
     if args.r2d:
@@ -90,8 +92,10 @@ def main():
 
             dataFile = data['raw_dir'] + '/Run' + str(run) + '.lh5'
             outFile = data['dsp_dir'] + '/Run' + str(run) + '.lh5'
-
-            build_dsp(dataFile, outFile, chan_config = chan_conf, write_mode = 'r')
+            try:
+                build_dsp(dataFile, outFile, chan_config = chan_conf, write_mode = 'r')
+            except:
+                print("Run does not exist")
             #build_dsp(dataFile, outFile, dsp_config = dsp)
 
 

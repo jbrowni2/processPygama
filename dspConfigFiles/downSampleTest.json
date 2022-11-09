@@ -43,7 +43,7 @@
             "module": "pygama.dsp.processors",
             "args": [
                 "sub1",
-                "18.0*us",
+                "8.0*us",
                 "0.8*us",
                 "wf_trap"
             ],
@@ -56,7 +56,7 @@
             "function": "min_max",
             "module": "pygama.dsp.processors",
             "args": [
-                "wf_trap[0:13000]",
+                "wf_trap",
                 "tp_min",
                 "tp_max",
                 "wf_min",
