@@ -6,6 +6,7 @@
         "maxEnergy",
         "trapEmax",
         "tp_max",
+        "wfEmax",
         "tp_50"
     ],
     "processors": {
@@ -39,6 +40,26 @@
                 "sub1"
             ],
             "unit": "ADC"
+        },
+        "tp_min1, tp_max1, wf_min1, wfEmax": {
+            "function": "min_max",
+            "module": "pygama.dsp.processors",
+            "args": [
+                "sub1",
+                "tp_min1",
+                "tp_max1",
+                "wf_min1",
+                "wfEmax"
+            ],
+            "unit": [
+                "ns",
+                "ns",
+                "ADC",
+                "ADC"
+            ],
+            "prereqs": [
+                "sub1"
+            ]
         },
         "wf_trap": {
             "function": "trap_norm",
